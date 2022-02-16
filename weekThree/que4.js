@@ -2,14 +2,14 @@
 
 const printMessage = (msg, delay, noOfTimes) => {
 
-    const timerID = setInterval(() => {
-      if(noOfTimes === 1) {
-        clearInterval(timerID);
-      } 
-      console.log(msg);
-      noOfTimes--;
-    }, delay);
-  
-  };k
-  
-  printMessage('Hello', 1000, 5);
+  const timerID = setInterval(() => {
+    if(noOfTimes === 1) {
+      clearInterval(timerID);
+    } 
+    console.log(msg);
+    noOfTimes--;
+  }, delay);
+
+};
+
+printMessage('Hello', 1000, 5);
