@@ -1,15 +1,15 @@
 // write a function which takes a message and time. The function should print that message every X interval.
 
-const printMessage = (msg, delay, noOfTimes) => {
+const printMessage = (msg, delay, countdown) => {
+  
+  const timeoutID =  setInterval(() => {
+    if(countdown === 0) {
+      clearInterval(timeoutID);
+    } else {
+      console.log(msg);
+    }
+    countdown--;
+  }, delay)
+}
 
-  const timerID = setInterval(() => {
-    if(noOfTimes === 1) {
-      clearInterval(timerID);
-    } 
-    console.log(msg);
-    noOfTimes--;
-  }, delay);
-
-};
-
-printMessage('Hello', 1000, 5);
+printMessage('Hello Aman', 1000, 5);
