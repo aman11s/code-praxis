@@ -16,6 +16,6 @@ const input = [
     ['e', 'd', 'f'],
 ];
 
-const arrayFlat = input.join(',').split(',');
+const arrayFlat = input.reduce((acc, curr) => [...acc, ...curr], []);
 console.log(arrayFlat);
 

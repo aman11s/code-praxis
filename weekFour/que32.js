@@ -8,17 +8,10 @@ Your output should be: "nEOg"
 
 const str = 'neoG';
 const vowels = ['a', 'e', 'i', 'o', 'u'];
-const isVowel = char => {
-    for(let i=0; i < char.length; i++) {
-        return vowels[i].includes(char.toLowerCase());
-    }
-}
-// console.log(isVowel('A'))
-const vowelsToUpperCase = str => str.split('').map(letter => {
-    console.log(isVowel(str))
-    isVowel(letter) ? letter.toUpperCase() : letter.toLowerCase()
-});
-console.log(vowelsToUpperCase(str));
+const isVowel = char => vowels.includes(char.toLowerCase());
 
+const result = [...str].reduce((acc, curr) => {
+    return acc += isVowel(curr) ?  curr.toUpperCase() : curr.toLowerCase();
+}, "")
 
-
+console.log(result);

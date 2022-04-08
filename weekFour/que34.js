@@ -17,6 +17,7 @@ const input = [
 ];
 
 const arrFlat = input.reduce((acc, curr) => [...acc, ...curr], []);
-console.log(arrFlat);
-const elemOccurance = (acc, curr) => ({...acc, curr : arrFlat.find(elem => curr ===)})
 
+const arrOccurance = arrFlat.reduce((acc, curr) => curr in acc ? {...acc, [curr]: acc[curr] + 1} : {...acc, [curr] : 1}, {});
+
+console.log(arrOccurance);
