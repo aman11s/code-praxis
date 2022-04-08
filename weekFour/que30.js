@@ -2,5 +2,5 @@
 
 If your input is: 24345687
 
-Your output should be: 2-23456-87
+Your output should be: 2-43456-87
 */
